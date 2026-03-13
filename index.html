@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mande Bem | Ferramentas Úteis para o Dia a Dia</title>
+    <meta name="description" content="O MandeBem.com oferece calculadoras gratuitas para churrascos e festas, focando em economia, planejamento inteligente e consumo consciente.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://mandebem.com/img/mandebem.com.png">
+    <style>
+        .modal { display: none; }
+        .modal.active { display: flex; }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2950297102005696"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <section class="py-20 bg-gradient-to-r from-gray-500 to-gray-700 text-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-6"><img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-24 object-contain"></div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Facilite sua vida com o Mande Bem</h1>
+            <p class="text-xl mb-8 opacity-90">Uma curadoria de ferramentas e calculadoras essenciais para o seu cotidiano.</p>
+        </div>
+    </section>
+    <section class="container mx-auto px-4 pt-16 pb-8 text-center max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+            Planejamento Inteligente para o seu Bolso e para o Planeta
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            No <strong>MandeBem.com</strong>, acreditamos que a organização é a chave para uma vida mais leve e produtiva. Muitas vezes, o desperdício de tempo e dinheiro acontece por falta de dados precisos. Por isso, criamos uma curadoria de ferramentas focadas em <strong>consumo consciente</strong> e <strong>educação financeira aplicada</strong>. 
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-500">
+            <span class="flex items-center bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                ✅ Economia Real
+            </span>
+            <span class="flex items-center bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                ✅ Zero Desperdício
+            </span>
+            <span class="flex items-center bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                ✅ Decisões Rápidas
+            </span>
+        </div>
+        <p class="mt-8 text-lg text-gray-700">
+            Seja para celebrar com amigos ou para profissionalizar seu negócio, nossas calculadoras automáticas garantem que você tenha o controle total sobre seus gastos, evitando surpresas e otimizando cada centavo. 
+            <strong>Explore nossas ferramentas abaixo e descubra como é fácil mandar bem!</strong>
+        </p>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-gray-300 to-gray-100 text-center">
+        <main id="apps" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossas Ferramentas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 text-center">
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <img src="https://api-churrasco.mandebem.com/logos/logo_1768596900890_calculo_de_churrasco.png" class="h-24 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Cálculo de Churrasco</h3>
+                    <a href="/calculodechurrasco" class="bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4">Acessar Grátis</a>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 opacity-75">
+                    <div class="h-24 flex items-center justify-center text-5xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold mb-2">Venda seu Churrasco</h3>
+                    <span class="text-blue-600 font-bold">Em Breve</span>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 opacity-75">
+                    <div class="h-24 flex items-center justify-center text-5xl mb-4">🎈</div>
+                    <h3 class="text-xl font-bold mb-2">Cálculo de Festa</h3>
+                    <span class="text-purple-600 font-bold">Em Breve</span>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-center mb-12">Dicas de Consumo e Economia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <button onclick="openModal('modal1')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-orange-500">
+                    <h3 class="font-bold">O Guia Definitivo para Eventos</h3>
+                    <p class="text-sm text-gray-500">Organizar um evento, seja um almoço em família ou uma grande celebração, exige mais do que boa vontade; exige precisão. O MandeBem.com nasce com a missão de ser o seu braço direito na curadoria de ferramentas essenciais para o cotidiano.</p>
+                    <div class="flex justify-end">
+                        <p class="w-[40%] bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4 text-center cursor-pointer">
+                            Saiba mais...
+                        </p>
+                    </div>
+                </button>
+                <button onclick="openModal('modal2')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-blue-500">
+                    <h3 class="font-bold">Empreendedorismo Inteligente</h3>
+                    <p class="text-sm text-gray-500">Para quem trabalha com eventos, a margem de erro é estreita. Um cálculo errado pode significar prejuízo ou a insatisfação do cliente. A ferramenta Venda seu Churrasco do MandeBem.com foi desenhada para o profissional que busca agilidade sem abrir mão da precisão.</p>
+                    <div class="flex justify-end">
+                        <p class="w-[40%] bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4 text-center cursor-pointer">
+                            Saiba mais...
+                        </p>
+                    </div>
+                </button>
+                <button onclick="openModal('modal3')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-green-500">
+                    <h3 class="font-bold">Matemática contra o Desperdício</h3>
+                    <p class="text-sm text-gray-500">Vivemos em uma era onde a gestão de recursos é fundamental. O MandeBem.com acredita que a tecnologia deve facilitar escolhas mais inteligentes. Ao utilizar nossas calculadoras gratuitas, você aplica o conceito de consumo consciente na prática.</p>
+                    <div class="flex justify-end">
+                        <p class="w-[40%] bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4 text-center cursor-pointer">
+                            Saiba mais...
+                        </p>
+                    </div>
+                </button>
+                <button onclick="openModal('modal4')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-gray-500">
+                    <h3 class="font-bold">Tecnologia a Favor do Cotidiano</h3>
+                    <p class="text-sm text-gray-500">A rotina moderna pede soluções rápidas. O site MandeBem.com oferece uma interface intuitiva que resolve problemas complexos em segundos. Por que perder tempo com planilhas complicadas se você pode ter o cálculo automático na palma da mão?</p>
+                    <div class="flex justify-end">
+                        <p class="w-[40%] bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4 text-center cursor-pointer">
+                            Saiba mais...
+                        </p>
+                    </div>
+                </button>
+                <button onclick="openModal('modal5')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-purple-500">
+                    <h3 class="font-bold">Festa sem Surpresas</h3>
+                    <p class="text-sm text-gray-500">Nada estraga mais uma celebração do que a sensação de que o dinheiro "fugiu pelo ralo" ou que faltou algo básico para os convidados. O MandeBem.com é a solução definitiva para quem busca uma festa impecável e dentro do orçamento.</p>
+                    <div class="flex justify-end">
+                        <p class="w-[40%] bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 block mt-4 text-center cursor-pointer">
+                            Saiba mais...
+                        </p>
+                    </div>
+                </button>
+                <div class="bg-gray-800 text-white p-6 rounded-xl shadow flex items-center justify-center border-2 border-dashed border-gray-600">
+                    <p class="font-bold text-sm">🚀 Mais ferramentas em breve!</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer class="bg-gray-900 text-white py-10 mt-0">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-20 mx-auto mb-4 grayscale invert">
+            <h2 class="text-3xl font-bold mb-4">Mande Bem em qualquer ocasião.</h2>
+            <p class="text-lg mb-8 opacity-80 max-w-2xl mx-auto">
+                Sua central de ferramentas inteligentes para economizar tempo, dinheiro e recursos. 
+                Transforme seu planejamento em consumo consciente hoje mesmo.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-12 text-sm font-semibold uppercase tracking-wider">
+                <a href="#apps" class="hover:text-orange-400 transition">Ferramentas</a>
+                <a href="https://mandebem.com/politicadeprivacidade.html" target="_blank" class="hover:text-orange-400 transition">Privacidade</a>
+                <a href="mailto:contato@mandebem.com" class="hover:text-orange-400 transition">Contato</a>
+            </div>
+
+            <div class="border-t border-white border-opacity-10 pt-8">
+                <p class="opacity-50 text-xs">
+                    © 2026 <strong>MandeBem.com</strong> - Todos os direitos reservados. 
+                    <br class="md:hidden"> Desenvolvido para facilitar o seu cotidiano.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full relative">
+            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-orange-600">O Guia Definitivo para Eventos Econômicos:<br>Planeje com o MandeBem</h2>
+            <p class="leading-relaxed text-gray-700">Organizar um evento, seja um almoço em família ou uma grande celebração, exige mais do que boa vontade; exige precisão. O MandeBem.com nasce com a missão de ser o seu braço direito na curadoria de ferramentas essenciais para o cotidiano. Saber exatamente quanto gastar não é apenas uma questão de orçamento, mas de <strong>consumo consciente</strong>. Quando você utiliza nossa ferramenta de Cálculo de Churrasco ou Cálculo de Festa, você evita o desperdício de alimentos e garante que seu dinheiro seja investido onde realmente importa. Planejar com antecedência permite comparar preços e comprar as quantidades exatas, transformando a ansiedade da organização em uma experiência prazerosa e econômica.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full relative">
+            <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Empreendedorismo Inteligente:<br>Como o "Venda seu Churrasco" Profissionaliza seu Negócio</h2>
+            <p class="leading-relaxed text-gray-700">Para quem trabalha com eventos, a margem de erro é estreita. Um cálculo errado pode significar prejuízo ou a insatisfação do cliente. A ferramenta Venda seu Churrasco do MandeBem.com foi desenhada para o profissional que busca agilidade sem abrir mão da precisão. Mais do que apenas listar ingredientes, entender a composição de custos é vital para a saúde financeira do seu negócio. Ao automatizar o cálculo de carnes, acompanhamentos e bebidas, você ganha tempo para focar no atendimento e na qualidade do serviço. O consumo consciente aqui se traduz em <strong>sustentabilidade operacional</strong>: menos sobras, mais lucro e um orçamento transparente para o seu cliente final.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full relative">
+            <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-green-600">Consumo Consciente:<br>A Matemática contra o Desperdício</h2>
+            <p class="leading-relaxed text-gray-700">Vivemos em uma era onde a gestão de recursos é fundamental. O MandeBem.com acredita que a tecnologia deve facilitar escolhas mais inteligentes. Ao utilizar nossas calculadoras gratuitas, você aplica o conceito de consumo consciente na prática. Muitas vezes, compramos "por instinto" e acabamos com excessos que vão parar no lixo. Seja no Cálculo de Festa para o aniversário do seu filho ou no planejamento de bebidas para o final de semana, saber os gastos reais evita compras impulsivas. Economizar não é deixar de fazer, é fazer melhor, utilizando os dados a seu favor para uma vida mais organizada e equilibrada financeiramente.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full relative">
+            <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-gray-600">Tecnologia a Favor do Cotidiano:<br>Por que usar o MandeBem.com?</h2>
+            <p class="leading-relaxed text-gray-700">A rotina moderna pede soluções rápidas. O site MandeBem.com oferece uma interface intuitiva que resolve problemas complexos em segundos. Por que perder tempo com planilhas complicadas se você pode ter o cálculo automático de salgados, sobremesas e carnes na palma da mão? Nossa curadoria de ferramentas foca no que é essencial. Ter o controle sobre os gastos do seu evento permite que você tenha uma visão macro do seu estilo de vida. A economia gerada pelo uso constante de ferramentas de medição pode ser o diferencial para que você consiga realizar mais projetos ao longo do ano. Facilite sua vida, evite o estresse e mande bem em cada decisão.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full relative">
+            <button onclick="closeModal('modal5')" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-purple-600">Festa sem Surpresas:<br>Controle seus Gastos e Aproveite o Momento</h2>
+            <p class="leading-relaxed text-gray-700">Nada estraga mais uma celebração do que a sensação de que o dinheiro "fugiu pelo ralo" ou que faltou algo básico para os convidados. O MandeBem.com é a solução definitiva para quem busca uma festa impecável e dentro do orçamento. Através do Cálculo de Festa, você dimensiona salgados, bebidas e sobremesas de acordo com o seu perfil de público. Esse nível de detalhamento é o segredo para manter as finanças em dia. Quando você domina a planilha de custos, você domina o evento. Explore nossas calculadoras e descubra como a economia inteligente e o planejamento prévio são os ingredientes principais para qualquer anfitrião de sucesso.</p>
+        </div>
+    </div>
+    <script>
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+        // Fechar ao clicar fora do modal
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) { event.target.classList.remove('active'); }
+        }
+    </script>
+</body>
+</html>
