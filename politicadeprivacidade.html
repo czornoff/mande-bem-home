@@ -1,98 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mande Bem | Ferramentas Úteis para o Dia a Dia</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="icon" href="https://mandebem.com/img/mandebem.com.png">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2950297102005696" crossorigin="anonymous"></script>
-    </head>
-    <body class="bg-slate-50 text-slate-700 font-sans leading-relaxed">
-        
-        <section class="py-16 bg-gradient-to-br from-slate-600 via-slate-700 to-slate-800 text-white shadow-inner">
-            <div class="container mx-auto px-4">
+<html lang="pt-br" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mande Bem | Política de Privacidade</title>
+    <meta name="description"
+        content="Política de Privacidade do MandeBem.com - Ferramentas Úteis para o Dia a Dia.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                        },
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" href="https://mandebem.com/img/mandebem.com.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2950297102005696"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500">
+    <!-- Theme Toggle -->
+    <div class="fixed top-6 right-6 z-50">
+        <button id="theme-toggle" class="p-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-95 text-zinc-600 dark:text-orange-600">
+            <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 hidden"></i>
+            <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-6 h-6 hidden"></i>
+        </button>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/send?phone=5511993788486" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 p-4 bg-[#25D366] text-white rounded-full shadow-2xl hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center group"
+       title="Fale conosco no WhatsApp">
+        <i data-lucide="message-circle-question-mark" class="w-8 h-8"></i>
+    </a>
+
+    <div class="min-h-screen flex flex-col items-center pt-8 text-center transition-colors duration-500">
+
+        <!-- Hero Section -->
+        <div class="flex-1 flex flex-col items-center justify-center max-w-4xl space-y-12 py-12 px-6 w-full">
+            <div class="flex flex-col items-center space-y-8">
                 <div class="flex justify-center">
-                    <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-28 drop-shadow-lg transition-transform hover:scale-105 duration-300">
+                    <a href="index.html" class="relative group block">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-red-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                        <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" 
+                            class="relative h-32 w-32 object-contain rounded-full bg-white dark:bg-zinc-900 border-4 border-white dark:border-zinc-800 shadow-xl p-3">
+                    </a>
+                </div>
+
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-6xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-none">
+                        Política de <span class="text-orange-600">Privacidade</span>
+                    </h1>
                 </div>
             </div>
-        </section>
 
-        <main id="apps" class="container mx-auto max-w-4xl px-6 py-12 bg-white my-10 rounded-xl shadow-sm border border-slate-200">
-            
-            <h1 class="text-4xl font-extrabold text-slate-900 text-center mb-8 tracking-tight">Política de Privacidade</h1>
-            
-            <div class="space-y-6">
-                <p>
-                    A sua privacidade é importante para nós. É política do <strong>Mande Bem - Ferramentas Úteis para o Dia a Dia</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site 
-                    <a href="https://mandebem.com" class="text-blue-600 hover:underline font-medium">Mande Bem - Ferramentas Úteis para o Dia a Dia</a>, e outros sites que possuímos e operamos. 
-                </p>
+            <!-- Content Section -->
+            <section class="max-w-4xl w-full text-left bg-white dark:bg-zinc-900/40 p-8 md:p-12 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm relative overflow-hidden">
+                <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed relative z-10">
+                    <p>
+                        A sua privacidade é importante para nós. É política do <strong>Mande Bem - Ferramentas Úteis para o Dia a Dia</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site 
+                        <a href="https://mandebem.com" class="text-orange-600 hover:underline font-bold transition-colors">Mande Bem - Ferramentas Úteis para o Dia a Dia</a>, e outros sites que possuímos e operamos. 
+                    </p>
 
-                <p>
-                    Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
-                </p>
+                    <p>
+                        Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
+                    </p>
 
-                <p>
-                    Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
-                </p>
+                    <p>
+                        Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+                    </p>
 
-                <p>
-                    Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
-                </p>
+                    <p>
+                        Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+                    </p>
 
-                <p>
-                    O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas 
-                    <a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" class="text-blue-600 hover:underline font-medium">políticas de privacidade</a>.
-                </p>
+                    <p>
+                        O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas 
+                        <a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" class="text-orange-600 hover:underline font-bold transition-colors">políticas de privacidade</a>.
+                    </p>
 
-                <p>
-                    Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
-                </p>
+                    <p>
+                        Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+                    </p>
 
-                <div class="bg-slate-50 p-6 rounded-lg border-l-4 border-slate-400">
-                    <ul class="list-disc list-outside ml-5 space-y-4">
-                        <li>
-                            O serviço <strong>Google AdSense</strong> que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.
+                    <div class="bg-zinc-50 dark:bg-zinc-900/50 p-6 rounded-xl border-l-4 border-orange-600">
+                        <ul class="list-none space-y-4">
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
+                                <span>O serviço <strong>Google AdSense</strong> que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
+                                <span>Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
+                                <span>Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental rastreiam anonimamente seus interesses para apresentar anúncios relevantes.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
+                                <span>Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados nos permitem creditar adequadamente nossos parceiros quando uma compra ou ação é realizada via site afiliado.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-10 border-zinc-200 dark:border-zinc-800">
+
+                    <h3 class="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">Compromisso do Usuário</h3>
+                    <p>
+                        O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Mande Bem - Ferramentas Úteis para o Dia a Dia oferece no site, com caráter enunciativo, mas não limitativo:
+                    </p>
+                    
+                    <ul class="space-y-4 bg-zinc-50 dark:bg-zinc-900/50 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800">
+                        <li class="flex gap-3 font-medium">
+                            <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
+                            <span>Não se envolver em atividades que sejam ilegais ou contrárias à boa fé e à ordem pública;</span>
                         </li>
-                        <li>
-                            Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.
+                        <li class="flex gap-3 font-medium">
+                            <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
+                            <span>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, pornografia ilegal ou apologia ao terrorismo;</span>
                         </li>
-                        <li>
-                            Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental rastreiam anonimamente seus interesses para apresentar anúncios relevantes.
-                        </li>
-                        <li>
-                            Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados nos permitem creditar adequadamente nossos parceiros quando uma compra ou ação é realizada via site afiliado.
+                        <li class="flex gap-3 font-medium">
+                            <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
+                            <span>Não causar danos aos sistemas físicos e lógicos do Mande Bem, introduzindo vírus ou outros códigos maliciosos.</span>
                         </li>
                     </ul>
+
+                    <h3 class="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight pt-6">Mais informações</h3>
+                    <p>
+                        Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados para garantir a funcionalidade dos recursos que você usa.
+                    </p>
+
+                    <div class="mt-12 pt-6 border-t border-zinc-100 dark:border-zinc-900 text-sm text-zinc-500 italic flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        Esta política é efetiva a partir de <strong>21/01/2026</strong>.
+                    </div>
                 </div>
+            </section>
+        </div>
 
-                <hr class="my-10 border-slate-200">
-
-                <h3 class="text-2xl font-bold text-slate-800 mt-8 mb-4">Compromisso do Usuário</h3>
-                <p>
-                    O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Mande Bem - Ferramentas Úteis para o Dia a Dia oferece no site, com caráter enunciativo, mas não limitativo:
+        <!-- Footer -->
+        <footer class="w-full max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-zinc-200 dark:border-zinc-900 grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-4 bg-white dark:bg-zinc-800 rounded-t-lg shadow-[0_-5px_20px_rgba(0,0,0,0.02)]">
+            <div class="space-y-2 text-center items-center md:items-start md:text-left">
+                <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-20 w-auto mb-6 mx-auto md:mx-0">
+                <h3 class="text-lg font-black tracking-tight text-orange-600 uppercase">
+                    Mande Bem em qualquer ocasião.
+                </h3>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-sm">
+                    Sua central de ferramentas inteligentes para economizar tempo, dinheiro e recursos.
                 </p>
+            </div>
+
+            <div class="space-y-2 text-center items-center md:text-right md:flex md:flex-col md:items-end">
+                <div>
+                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 md:mt-16">
+                        Links Úteis
+                    </h3>
+                    <div class="flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
+                        <a href="index.html" class="hover:text-orange-600 transition-colors">Início</a>
+                        <a href="index.html#apps" class="hover:text-orange-600 transition-colors">Ferramentas</a>
+                    </div>
+                </div>
                 
-                <ol class="list-[upper-alpha] list-outside ml-6 space-y-3 bg-white p-4">
-                    <li class="pl-2">Não se envolver em atividades que sejam ilegais ou contrárias à boa fé e à ordem pública;</li>
-                    <li class="pl-2">Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, pornografia ilegal ou apologia ao terrorismo;</li>
-                    <li class="pl-2">Não causar danos aos sistemas físicos e lógicos do Mande Bem - Ferramentas Úteis para o Dia a Dia, introduzindo vírus ou outros códigos maliciosos.</li>
-                </ol>
-
-                <h3 class="text-2xl font-bold text-slate-800 mt-8 mb-4">Mais informações</h3>
-                <p>
-                    Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados para garantir a funcionalidade dos recursos que você usa.
-                </p>
-
-                <div class="mt-12 pt-6 border-t border-slate-100 text-sm text-slate-500 italic">
-                    Esta política é efetiva a partir de <strong>21/01/2026</strong>.
+                <div>
+                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 mt-2">
+                        Contato
+                    </h3>
+                    <div class="space-y-3 flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
+                        <a href="mailto:contato@mandebem.com" class="hover:text-orange-600 transition-colors">
+                            <span class="group-hover:underline text-center items-center">contato@mandebem.com</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </main>
 
-	<footer class="text-center py-8 text-slate-400 text-sm">
-            &copy; 2026 Mande Bem - Todos os direitos reservados.
+            <!-- Copyright -->
+            <div class="md:col-span-2 border-t border-zinc-200 dark:border-zinc-900 text-center mt-8">
+                <div class="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-zinc-400 dark:text-zinc-500 font-medium tracking-wide">
+                    © 2026 MandeBem.com - Todos os direitos reservados.
+                </div>
+            </div>
         </footer>
+    </div>
 
-    </body>
+    <script>
+        // Configurar ícones Lucide
+        lucide.createIcons();
+
+        // Lógica de Tema
+        const themeToggle = document.getElementById('theme-toggle');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const html = document.documentElement;
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            }
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.toggle('dark', savedTheme === 'dark');
+        updateThemeIcons(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+    </script>
+</body>
+
 </html>
