@@ -204,7 +204,7 @@
     <script src="data.js"></script>
     <script src="layout.js"></script>
     <script>
-        // Renderizar Layout
+        // Renderizar Layout (isso já configura o tema e o menu mobile)
         renderLayout('home');
 
         // Load blog items
@@ -240,49 +240,14 @@
                     </div>
                 `).join('');
                 
-                lucide.createIcons();
+                // Reinicializar ícones Lucide para os posts injetados dinamicamente
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
             } catch (error) {
                 console.error('Erro ao carregar o blog:', error);
             }
         }
-
-        // Configurar ícones Lucide
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Lógica de Tema
-        const themeToggle = document.getElementById('theme-toggle');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const html = document.documentElement;
-
-        function updateThemeIcons(theme) {
-            if (theme === 'dark') {
-                lightIcon.classList.remove('hidden');
-                darkIcon.classList.add('hidden');
-            } else {
-                lightIcon.classList.add('hidden');
-                darkIcon.classList.remove('hidden');
-            }
-        }
-
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.classList.toggle('dark', savedTheme === 'dark');
-        updateThemeIcons(savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = html.classList.toggle('dark');
-            const newTheme = isDark ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcons(newTheme);
-        });
 
         // Initialize blog
         loadBlog();
