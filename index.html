@@ -57,14 +57,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500">
-    <!-- Theme Toggle -->
-    <div class="fixed top-6 right-6 z-50">
-        <button id="theme-toggle" class="p-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-95 text-zinc-600 dark:text-orange-600">
-            <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 hidden"></i>
-            <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-6 h-6 hidden"></i>
-        </button>
-    </div>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500 pt-16">
+    
+    <div id="header-placeholder"></div>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://api.whatsapp.com/send?phone=5511993788486" target="_blank" rel="noopener noreferrer" 
@@ -150,7 +145,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Tool 1 -->
                     <div class="p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 group flex flex-col items-center text-center">
                         <div class="mb-6 p-4 bg-white dark:bg-zinc-800 rounded-2xl w-fit shadow-sm group-hover:bg-orange-600 transition-colors duration-300 mx-auto">
@@ -177,276 +172,89 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- Tool 3 (Em Breve) -->
-                    <div class="p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 opacity-60 flex flex-col items-center text-center">
-                        <div class="mb-6 p-4 bg-white dark:bg-zinc-800 rounded-2xl w-fit shadow-sm mx-auto text-4xl">
-                            🎈
-                        </div>
-                        <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-2">Cálculo de Festa</h3>
-                        <div class="mt-auto pt-4 w-full">
-                            <span class="inline-block w-full border-2 border-dashed border-zinc-300 dark:border-zinc-700 py-3 text-sm font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400 rounded-xl">
-                                Em Breve
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Tips Section -->
-            <div class="w-full space-y-12 py-8 mt-12">
-                <div class="text-center space-y-4">
-                    <h2 class="text-3xl md:text-5xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">
-                        Dicas de <span class="text-orange-600">Consumo e Economia</span>
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <button onclick="openModal('modal1')" class="flex flex-col p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 text-center w-full h-full group">
-                        <div class="p-4 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm text-orange-600 w-fit group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                            <i data-lucide="book-open" class="w-8 h-8"></i>
-                        </div>
-                        <div class="mt-6 flex-1">
-                            <h4 class="font-bold text-xl text-zinc-900 dark:text-white mb-3">O Guia Definitivo para Eventos</h4>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">Organizar um evento, seja um almoço em família ou uma grande celebração, exige mais do que boa vontade; exige precisão...</p>
-                        </div>
-                        <div class="mt-6 pt-4 w-full border-t border-zinc-200 dark:border-zinc-800 group-hover:border-orange-200 dark:group-hover:border-orange-900 transition-colors flex justify-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-500">Ler o artigo →</span>
-                        </div>
-                    </button>
-
-                    <button onclick="openModal('modal2')" class="flex flex-col p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 text-center w-full h-full group">
-                        <div class="p-4 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm text-orange-600 w-fit group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                            <i data-lucide="trending-up" class="w-8 h-8"></i>
-                        </div>
-                        <div class="mt-6 flex-1">
-                            <h4 class="font-bold text-xl text-zinc-900 dark:text-white mb-3">Empreendedorismo Inteligente</h4>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">Para quem trabalha com eventos, a margem de erro é estreita. Um cálculo errado pode significar prejuízo ou a insatisfação do cliente...</p>
-                        </div>
-                        <div class="mt-6 pt-4 w-full border-t border-zinc-200 dark:border-zinc-800 group-hover:border-orange-200 dark:group-hover:border-orange-900 transition-colors flex justify-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-500">Ler o artigo →</span>
-                        </div>
-                    </button>
-
-                    <button onclick="openModal('modal3')" class="flex flex-col p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 text-center w-full h-full group">
-                        <div class="p-4 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm text-orange-600 w-fit group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                            <i data-lucide="calculator" class="w-8 h-8"></i>
-                        </div>
-                        <div class="mt-6 flex-1">
-                            <h4 class="font-bold text-xl text-zinc-900 dark:text-white mb-3">Matemática contra o Desperdício</h4>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">Vivemos em uma era onde a gestão de recursos é fundamental. O MandeBem.com acredita que a tecnologia deve facilitar escolhas mais inteligentes...</p>
-                        </div>
-                        <div class="mt-6 pt-4 w-full border-t border-zinc-200 dark:border-zinc-800 group-hover:border-orange-200 dark:group-hover:border-orange-900 transition-colors flex justify-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-500">Ler o artigo →</span>
-                        </div>
-                    </button>
-
-                    <button onclick="openModal('modal4')" class="flex flex-col p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 text-center w-full h-full group">
-                        <div class="p-4 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm text-orange-600 w-fit group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                            <i data-lucide="zap" class="w-8 h-8"></i>
-                        </div>
-                        <div class="mt-6 flex-1">
-                            <h4 class="font-bold text-xl text-zinc-900 dark:text-white mb-3">Tecnologia a Favor do Cotidiano</h4>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">A rotina moderna pede soluções rápidas. O site MandeBem.com oferece uma interface intuitiva que resolve problemas complexos em segundos...</p>
-                        </div>
-                        <div class="mt-6 pt-4 w-full border-t border-zinc-200 dark:border-zinc-800 group-hover:border-orange-200 dark:group-hover:border-orange-900 transition-colors flex justify-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-500">Ler o artigo →</span>
-                        </div>
-                    </button>
-
-                    <button onclick="openModal('modal5')" class="flex flex-col p-8 bg-zinc-100 dark:bg-zinc-900/50 rounded-xl border border-transparent dark:border-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-xl hover:border-zinc-200 transition-all duration-300 text-center w-full h-full group">
-                        <div class="p-4 bg-white dark:bg-zinc-800 rounded-2xl shadow-sm text-orange-600 w-fit group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                            <i data-lucide="party-popper" class="w-8 h-8"></i>
-                        </div>
-                        <div class="mt-6 flex-1">
-                            <h4 class="font-bold text-xl text-zinc-900 dark:text-white mb-3">Festa sem Surpresas</h4>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">Nada estraga mais uma celebração do que a sensação de que o dinheiro "fugiu pelo ralo" ou que faltou algo básico para os convidados...</p>
-                        </div>
-                        <div class="mt-6 pt-4 w-full border-t border-zinc-200 dark:border-zinc-800 group-hover:border-orange-200 dark:group-hover:border-orange-900 transition-colors flex justify-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-500">Ler o artigo →</span>
-                        </div>
-                    </button>
-
-                    <div class="p-8 bg-zinc-900 dark:bg-zinc-800 rounded-xl flex flex-col justify-center items-center text-center w-full h-full border border-dashed border-zinc-600 dark:border-zinc-400 opacity-90 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-orange-600/10 to-transparent"></div>
-                        <div class="relative z-10">
-                            <span class="inline-block mb-4 px-3 py-3 text-sm px-6 font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-400 bg-zinc-800 dark:bg-zinc-900 rounded-full">
-                                🚀 AGUARDE
-                            </span>
-                            <h4 class="font-bold text-xl text-white dark:text-zinc-400">Aguarde novas ferramentas!</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Footer -->
-        <footer class="w-full max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-zinc-200 dark:border-zinc-900 grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-4 bg-white dark:bg-zinc-800 rounded-t-lg shadow-[0_-5px_20px_rgba(0,0,0,0.02)]">
-            <div class="space-y-2 text-center items-center md:items-start md:text-left">
-                <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-20 w-auto mb-6 mx-auto md:mx-0">
-                <h3 class="text-lg font-black tracking-tight text-orange-600 uppercase">
-                    Mande Bem em qualquer ocasião.
-                </h3>
-                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-sm">
-                    Sua central de ferramentas inteligentes para economizar tempo, dinheiro e recursos. Transforme seu planejamento em consumo consciente hoje mesmo.
+        <!-- Blog Section -->
+        <div id="blog-section" class="w-full space-y-12 py-8 mt-12 text-left">
+            <div class="text-center space-y-4 mb-8">
+                <h2 class="text-3xl md:text-5xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">
+                    Nosso <span class="text-orange-600">Blog</span>
+                </h2>
+                <p class="text-zinc-500 dark:text-zinc-400 font-medium max-w-2xl mx-auto">
+                    Dicas, técnicas e novidades para você mandar bem.
                 </p>
             </div>
-
-            <div class="space-y-2 text-center items-center md:text-right md:flex md:flex-col md:items-end">
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 md:mt-16">
-                        Links Úteis
-                    </h3>
-                    <div class="flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
-                        <a href="#apps" class="hover:text-orange-600 transition-colors">Ferramentas</a>
-                        <a href="politicadeprivacidade.html" target="_blank" class="hover:text-orange-600 transition-colors">Privacidade</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 mt-2">
-                        Contato
-                    </h3>
-                    <div class="space-y-3 flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
-                        <a href="mailto:contato@mandebem.com" class="hover:text-orange-600 transition-colors">
-                            <span class="group-hover:underline  text-center items-center">contato@mandebem.com</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="md:col-span-2 border-t border-zinc-200 dark:border-zinc-900 text-center mt-8">
-                <div class="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-zinc-400 dark:text-zinc-500 font-medium tracking-wide">
-                    © 2026 MandeBem.com - Todos os direitos reservados.
-                    <span class="block mt-1 sm:inline sm:mt-0">Desenvolvido para facilitar o seu cotidiano.</span>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-
-    <!-- Modals -->
-    <div id="modal1" class="modal fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 items-center justify-center p-4">
-        <div class="bg-white dark:bg-zinc-900/95 rounded-xl p-8 md:p-12 max-w-3xl w-full relative border border-zinc-200 dark:border-zinc-800 shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal1')" class="absolute top-6 right-6 text-zinc-400 hover:text-orange-600 transition-colors text-3xl font-black leading-none p-2 rounded-full hover:bg-orange-50 dark:hover:bg-zinc-800 w-12 h-12 flex items-center justify-center">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-orange-100 dark:bg-orange-900/40 rounded-2xl text-orange-600 w-fit">
-                    <i data-lucide="book-open" class="w-8 h-8"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-orange-600 leading-tight">O Guia Definitivo para Eventos Econômicos:<br><span class="text-zinc-900 dark:text-white">Planeje com o MandeBem</span></h2>
-            </div>
-            <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
-                <p>Organizar um evento, seja um almoço em família ou uma grande celebração, exige mais do que boa vontade; exige precisão. O MandeBem.com nasce com a missão de ser o seu braço direito na curadoria de ferramentas essenciais para o cotidiano.</p>
-                <p>Saber exatamente quanto gastar não é apenas uma questão de orçamento, mas de <strong>consumo consciente</strong>. Quando você utiliza nossa ferramenta de Cálculo de Churrasco ou Cálculo de Festa, você evita o desperdício de alimentos e garante que seu dinheiro seja investido onde realmente importa.</p>
-                <p>Planejar com antecedência permite comparar preços e comprar as quantidades exatas, transformando a ansiedade da organização em uma experiência prazerosa e econômica.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 items-center justify-center p-4">
-        <div class="bg-white dark:bg-zinc-900/95 rounded-xl p-8 md:p-12 max-w-3xl w-full relative border border-zinc-200 dark:border-zinc-800 shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal2')" class="absolute top-6 right-6 text-zinc-400 hover:text-orange-600 transition-colors text-3xl font-black leading-none p-2 rounded-full hover:bg-orange-50 dark:hover:bg-zinc-800 w-12 h-12 flex items-center justify-center">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                 <div class="p-3 bg-orange-100 dark:bg-orange-900/40 rounded-2xl text-orange-600 w-fit">
-                    <i data-lucide="trending-up" class="w-8 h-8"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-orange-600 leading-tight">Empreendedorismo Inteligente:<br><span class="text-zinc-900 dark:text-white">Como o "Venda seu Churrasco" Profissionaliza seu Negócio</span></h2>
-            </div>
-            <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
-                <p>Para quem trabalha com eventos, a margem de erro é estreita. Um cálculo errado pode significar prejuízo ou a insatisfação do cliente. A ferramenta Venda seu Churrasco do MandeBem.com foi desenhada para o profissional que busca agilidade sem abrir mão da precisão.</p>
-                <p>Mais do que apenas listar ingredientes, entender a composição de custos é vital para a saúde financeira do seu negócio. Ao automatizar o cálculo de carnes, acompanhamentos e bebidas, você ganha tempo para focar no atendimento e na qualidade do serviço.</p>
-                <p>O consumo consciente aqui se traduz em <strong>sustentabilidade operacional</strong>: menos sobras, mais lucro e um orçamento transparente para o seu cliente final.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 items-center justify-center p-4">
-         <div class="bg-white dark:bg-zinc-900/95 rounded-xl p-8 md:p-12 max-w-3xl w-full relative border border-zinc-200 dark:border-zinc-800 shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal3')" class="absolute top-6 right-6 text-zinc-400 hover:text-orange-600 transition-colors text-3xl font-black leading-none p-2 rounded-full hover:bg-orange-50 dark:hover:bg-zinc-800 w-12 h-12 flex items-center justify-center">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-orange-100 dark:bg-orange-900/40 rounded-2xl text-orange-600 w-fit">
-                    <i data-lucide="calculator" class="w-8 h-8"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-orange-600 leading-tight">Consumo Consciente:<br><span class="text-zinc-900 dark:text-white">A Matemática contra o Desperdício</span></h2>
-            </div>
-            <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
-                <p>Vivemos em uma era onde a gestão de recursos é fundamental. O MandeBem.com acredita que a tecnologia deve facilitar escolhas mais inteligentes.</p>
-                <p>Ao utilizar nossas calculadoras gratuitas, você aplica o conceito de consumo consciente na prática. Muitas vezes, compramos "por instinto" e acabamos com excessos que vão parar no lixo. Seja no Cálculo de Festa para o aniversário do seu filho ou no planejamento de bebidas para o final de semana, saber os gastos reais evita compras impulsivas.</p>
-                <p>Economizar não é deixar de fazer, é fazer melhor, utilizando os dados a seu favor para uma vida mais organizada e equilibrada financeiramente.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 items-center justify-center p-4">
-        <div class="bg-white dark:bg-zinc-900/95 rounded-xl p-8 md:p-12 max-w-3xl w-full relative border border-zinc-200 dark:border-zinc-800 shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal4')" class="absolute top-6 right-6 text-zinc-400 hover:text-orange-600 transition-colors text-3xl font-black leading-none p-2 rounded-full hover:bg-orange-50 dark:hover:bg-zinc-800 w-12 h-12 flex items-center justify-center">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                 <div class="p-3 bg-orange-100 dark:bg-orange-900/40 rounded-2xl text-orange-600 w-fit">
-                    <i data-lucide="zap" class="w-8 h-8"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-orange-600 leading-tight">Tecnologia a Favor do Cotidiano:<br><span class="text-zinc-900 dark:text-white">Por que usar o MandeBem.com?</span></h2>
-            </div>
-            <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
-                <p>A rotina moderna pede soluções rápidas. O site MandeBem.com oferece uma interface intuitiva que resolve problemas complexos em segundos.</p>
-                <p>Por que perder tempo com planilhas complicadas se você pode ter o cálculo automático de salgados, sobremesas e carnes na palma da mão? Nossa curadoria de ferramentas foca no que é essencial. Ter o controle sobre os gastos do seu evento permite que você tenha uma visão macro do seu estilo de vida.</p>
-                <p>A economia gerada pelo uso constante de ferramentas de medição pode ser o diferencial para que você consiga realizar mais projetos ao longo do ano. Facilite sua vida, evite o estresse e mande bem em cada decisão.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal5" class="modal fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 items-center justify-center p-4">
-         <div class="bg-white dark:bg-zinc-900/95 rounded-xl p-8 md:p-12 max-w-3xl w-full relative border border-zinc-200 dark:border-zinc-800 shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal5')" class="absolute top-6 right-6 text-zinc-400 hover:text-orange-600 transition-colors text-3xl font-black leading-none p-2 rounded-full hover:bg-orange-50 dark:hover:bg-zinc-800 w-12 h-12 flex items-center justify-center">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-orange-100 dark:bg-orange-900/40 rounded-2xl text-orange-600 w-fit">
-                    <i data-lucide="party-popper" class="w-8 h-8"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-orange-600 leading-tight">Festa sem Surpresas:<br><span class="text-zinc-900 dark:text-white">Controle seus Gastos e Aproveite o Momento</span></h2>
-            </div>
-            <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
-                <p>Nada estraga mais uma celebração do que a sensação de que o dinheiro "fugiu pelo ralo" ou que faltou algo básico para os convidados. O MandeBem.com é a solução definitiva para quem busca uma festa impecável e dentro do orçamento.</p>
-                <p>Através do Cálculo de Festa, você dimensiona salgados, bebidas e sobremesas de acordo com o seu perfil de público. Esse nível de detalhamento é o segredo para manter as finanças em dia.</p>
-                <p>Quando você domina a planilha de custos, você domina o evento. Explore nossas calculadoras e descubra como a economia inteligente e o planejamento prévio são os ingredientes principais para qualquer anfitrião de sucesso.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openModal(id) { 
-            const modal = document.getElementById(id);
-            modal.style.display = 'flex';
-            // Trigger reflow
-            void modal.offsetWidth;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
             
-            // Adicionar suporte para fechar com a tecla ESC
-            document.addEventListener('keydown', function escHandler(e) {
-                if (e.key === 'Escape') {
-                    closeModal(id);
-                    document.removeEventListener('keydown', escHandler);
-                }
-            });
-        }
-        function closeModal(id) { 
-            const modal = document.getElementById(id);
-            modal.classList.remove('active');
-            setTimeout(() => {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }, 300);
-        }
-        // Fechar ao clicar fora do modal
-        window.onclick = function (event) {
-            if (event.target.classList.contains('modal')) { 
-                closeModal(event.target.id);
+            <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Data will be loaded here -->
+            </div>
+
+            <!-- See More Button -->
+            <div class="flex justify-center mt-12 pb-8">
+                <a href="blog.html" class="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl font-bold text-zinc-900 dark:text-white hover:border-orange-600 hover:text-orange-600 transition-all shadow-sm hover:shadow-xl group uppercase tracking-widest text-sm">
+                    Ver mais artigos
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform text-orange-600"></i>
+                </a>
+            </div>
+    <div id="footer-placeholder"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="layout.js"></script>
+    <script>
+        // Renderizar Layout
+        renderLayout('home');
+
+        // Load blog items
+        function loadBlog() {
+            try {
+                const container = document.getElementById('blog-container');
+                
+                // Pegar os últimos 6 artigos (mais recentes primeiro)
+                const latestPosts = [...blogData.artigos].reverse().slice(0, 6);
+                
+                container.innerHTML = latestPosts.map(post => `
+                    <div class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col h-full">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="${post.imagem}" alt="${post.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <figcaption class="text-[10px] uppercase tracking-widest text-zinc-500 mt-1 text-right me-3">
+                            Designed by <a href="https://www.freepik.com" target="_blank" class="text-orange-600">Freepik</a>
+                        </figcaption>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-4 group-hover:text-orange-600 transition-colors line-clamp-2">
+                                ${post.titulo}
+                            </h3>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-6 line-clamp-3">
+                                ${post.resumo}
+                            </p>
+                            <div class="mt-auto">
+                                <a href="post.html?id=${post.id}" class="inline-flex items-center text-sm font-black uppercase tracking-widest text-orange-600 group-hover:text-orange-500 gap-2">
+                                    Ler mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Erro ao carregar o blog:', error);
             }
         }
 
         // Configurar ícones Lucide
         lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
         // Lógica de Tema
         const themeToggle = document.getElementById('theme-toggle');
@@ -475,6 +283,9 @@
             localStorage.setItem('theme', newTheme);
             updateThemeIcons(newTheme);
         });
+
+        // Initialize blog
+        loadBlog();
     </script>
 </body>
 

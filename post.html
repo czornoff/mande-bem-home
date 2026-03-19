@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mande Bem | Artigo</title>
+    <meta name="description" content="Leia o artigo completo no MandeBem.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                        },
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" href="https://mandebem.com/img/mandebem.com.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500 pt-20">
+    
+    <div id="header-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div id="post-content" class="animate-pulse flex flex-col items-center">
+            <div class="h-8 w-3/4 bg-zinc-200 dark:bg-zinc-800 rounded mb-8"></div>
+            <div class="w-full aspect-video bg-zinc-200 dark:bg-zinc-800 rounded-2xl mb-8"></div>
+            <div class="space-y-4 w-full">
+                <div class="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"></div>
+                <div class="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-5/6"></div>
+                <div class="h-4 bg-zinc-200 dark:bg-zinc-800 rounded w-full"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="data.js"></script>
+    <script src="layout.js"></script>
+    <script>
+        // Renderizar Layout
+        renderLayout('blog');
+
+        function loadPost() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+            const container = document.getElementById('post-content');
+
+            if (!postId) {
+                container.innerHTML = '<p class="text-center text-zinc-500">Artigo não encontrado.</p>';
+                return;
+            }
+
+            try {
+                const post = blogData.artigos.find(a => a.id === postId);
+
+                if (!post) {
+                    container.innerHTML = '<p class="text-center text-zinc-500">Artigo não encontrado.</p>';
+                    return;
+                }
+
+                // Processar texto de forma robusta
+                const paragraphs = post.texto.split('\n');
+                let formattedHTML = '';
+
+                paragraphs.forEach(p => {
+                    const trimmed = p.trim();
+                    if (!trimmed) return;
+
+                    if (trimmed.startsWith('###')) {
+                        formattedHTML += `<h3 class="text-2xl font-black text-orange-600 mt-12 mb-6 uppercase tracking-tight">${trimmed.replace('###', '').trim()}</h3>`;
+                    } else {
+                        formattedHTML += `<p class="mb-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">${trimmed}</p>`;
+                    }
+                });
+
+                container.classList.remove('animate-pulse');
+                container.innerHTML = `
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-none mb-8 text-center max-w-4xl mx-auto">
+                        ${post.titulo}
+                    </h1>
+                    <p class="text-xl text-zinc-500 dark:text-zinc-400 mb-16 text-center max-w-2xl mx-auto font-medium leading-relaxed italic">
+                        ${post.resumo}
+                    </p>
+                    <div class="w-full aspect-video md:aspect-[21/9] relative overflow-hidden rounded-[2rem] shadow-2xl border border-zinc-200 dark:border-zinc-800">
+                        <img src="${post.imagem}" alt="${post.titulo}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    </div>
+                    <figcaption class="text-[10px] uppercase tracking-widest text-zinc-500 mt-1 text-right me-3 mb-16">
+                        Designed by <a href="https://www.freepik.com" target="_blank" class="text-orange-600">Freepik</a>
+                    </figcaption>
+                    <div class="max-w-3xl mx-auto md:px-6">
+                        ${formattedHTML}
+                    </div>
+                    <div class="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex justify-center">
+                        <a href="blog.html" class="inline-flex items-center text-sm font-black uppercase tracking-widest text-orange-600 hover:text-orange-500 gap-2">
+                             <i data-lucide="chevron-left" class="w-4 h-4"></i> Voltar ao Blog
+                        </a>
+                    </div>
+                `;
+
+                // Re-inicializar ícones Lucide para o conteúdo dinâmico
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Erro ao carregar o artigo:', error);
+                container.innerHTML = '<p class="text-center text-zinc-500">Erro ao carregar o artigo.</p>';
+            }
+        }
+
+        // Initialize post
+        loadPost();
+    
+        // Initialize theme and icons
+        lucide.createIcons();
+        
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const html = document.documentElement;
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.toggle('dark', savedTheme === 'dark');
+        updateThemeIcons(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+
+        loadPost();
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Mande Bem</title>
+    <meta name="description" content="Artigos e novidades do MandeBem.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                        },
+                        orange: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" href="https://mandebem.com/img/mandebem.com.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500 pt-20">
+    
+    <div id="header-placeholder"></div>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center space-y-4 mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter leading-none">
+                Nosso <span class="text-orange-600">Blog</span>
+            </h1>
+            <p class="text-xl text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto font-medium">
+                Dicas, técnicas e novidades para você mandar bem em qualquer ocasião.
+            </p>
+        </div>
+        
+        <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Data loaded from data.json -->
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="data.js"></script>
+    <script src="layout.js"></script>
+    <script>
+        // Renderizar Layout
+        renderLayout('blog');
+
+        function loadBlog() {
+            try {
+                const container = document.getElementById('blog-container');
+                
+                // Ordenar por mais recentes primeiro
+                const sortedPosts = [...blogData.artigos].reverse();
+                
+                container.innerHTML = sortedPosts.map(post => `
+                    <div class="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl transition-all group flex flex-col h-full">
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="${post.imagem}" alt="${post.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <figcaption class="text-[10px] uppercase tracking-widest text-zinc-500 mt-1 text-right me-3">
+                            Designed by <a href="https://www.freepik.com" target="_blank" class="text-orange-600">Freepik</a>
+                        </figcaption>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-4 group-hover:text-orange-600 transition-colors line-clamp-2">
+                                ${post.titulo}
+                            </h3>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mb-6 line-clamp-3">
+                                ${post.resumo}
+                            </p>
+                            <div class="mt-auto">
+                                <a href="post.html?id=${post.id}" class="inline-flex items-center text-sm font-black uppercase tracking-widest text-orange-600 group-hover:text-orange-500 gap-2">
+                                    Ler mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Erro ao carregar o blog:', error);
+            }
+        }
+
+        // Initialize blog
+        loadBlog();
+    </script>
+</body>
+</html>

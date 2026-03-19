@@ -45,14 +45,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500">
-    <!-- Theme Toggle -->
-    <div class="fixed top-6 right-6 z-50">
-        <button id="theme-toggle" class="p-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-95 text-zinc-600 dark:text-orange-600">
-            <i data-lucide="sun" id="theme-toggle-light-icon" class="w-6 h-6 hidden"></i>
-            <i data-lucide="moon" id="theme-toggle-dark-icon" class="w-6 h-6 hidden"></i>
-        </button>
-    </div>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-500 pt-16">
+    
+    <div id="header-placeholder"></div>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://api.whatsapp.com/send?phone=5511993788486" target="_blank" rel="noopener noreferrer" 
@@ -85,48 +80,48 @@
             <section class="max-w-4xl w-full text-left bg-white dark:bg-zinc-900/40 p-8 md:p-12 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm relative overflow-hidden">
                 <div class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed relative z-10">
                     <p>
-                        A sua privacidade é importante para nós. É política do <strong>Mande Bem - Ferramentas Úteis para o Dia a Dia</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site 
-                        <a href="https://mandebem.com" class="text-orange-600 hover:underline font-bold transition-colors">Mande Bem - Ferramentas Úteis para o Dia a Dia</a>, e outros sites que possuímos e operamos. 
+                        A sua privacidade é uma prioridade absoluta para nós. É política do <strong>Mande Bem - Ferramentas Úteis para o Dia a Dia</strong> respeitar a sua confidencialidade em relação a qualquer informação que possamos coletar no site 
+                        <a href="https://mandebem.com" class="text-orange-600 hover:underline font-bold transition-colors">Mande Bem - Ferramentas Úteis para o Dia a Dia</a>, bem como em outras plataformas que integram nossa rede de operação. 
                     </p>
 
                     <p>
-                        Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
+                        Coletamos informações pessoais estritamente necessárias para a prestação de nossos serviços. Este processo ocorre de forma transparente, ética e legal, sempre mediante o seu conhecimento e consentimento explícito. Além disso, deixamos claro a finalidade da coleta e como esses dados serão processados em nossa base.
                     </p>
 
                     <p>
-                        Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+                        Mantemos os dados coletados apenas pelo período indispensável para cumprir a finalidade solicitada. Todo o armazenamento é realizado sob rigorosos protocolos de segurança comercialmente aceitáveis, visando mitigar riscos de perda, roubo, acesso indevido, divulgação não autorizada ou qualquer forma de modificação ilícita.
                     </p>
 
                     <p>
-                        Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+                        Comprometemo-nos a não compartilhar informações de identificação pessoal publicamente ou com entidades terceiras, salvo sob estrita determinação judicial ou exigência legal.
                     </p>
 
                     <p>
-                        O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas 
+                        Nosso site pode apresentar links para ambientes externos fora de nossa gestão. Ressaltamos que não detemos controle sobre o conteúdo ou práticas de terceiros e, portanto, não nos responsabilizamos por suas respectivas 
                         <a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" class="text-orange-600 hover:underline font-bold transition-colors">políticas de privacidade</a>.
                     </p>
 
                     <p>
-                        Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+                        Você possui total autonomia para recusar a nossa solicitação de dados, ciente de que tal escolha pode limitar o acesso a determinadas funcionalidades ou serviços personalizados oferecidos pelo Mande Bem.
                     </p>
 
                     <div class="bg-zinc-50 dark:bg-zinc-900/50 p-6 rounded-xl border-l-4 border-orange-600">
                         <ul class="list-none space-y-4">
                             <li class="flex gap-3">
                                 <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
-                                <span>O serviço <strong>Google AdSense</strong> que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</span>
+                                <span>Integramos o serviço <strong>Google AdSense</strong>, que utiliza o cookie DoubleClick para veicular anúncios segmentados e relevantes, otimizando sua experiência de navegação e evitando a repetição excessiva de campanhas.</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
-                                <span>Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</span>
+                                <span>Para transparência total sobre a gestão de dados publicitários, recomendamos a consulta às FAQs oficiais de privacidade do Google AdSense.</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
-                                <span>Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental rastreiam anonimamente seus interesses para apresentar anúncios relevantes.</span>
+                                <span>A veiculação de anúncios é essencial para financiar a manutenção gratuita das nossas ferramentas e suportar novos desenvolvimentos. Os cookies de publicidade comportamental tratam seus interesses de forma anônima.</span>
                             </li>
                             <li class="flex gap-3">
                                 <span class="text-orange-600 mt-1.5"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
-                                <span>Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados nos permitem creditar adequadamente nossos parceiros quando uma compra ou ação é realizada via site afiliado.</span>
+                                <span>Atuamos com parceiros estratégicos e cookies de rastreamento de afiliados para garantir o correto comissionamento de ações realizadas via sites parceiros, sem prejuízo à sua privacidade.</span>
                             </li>
                         </ul>
                     </div>
@@ -135,27 +130,27 @@
 
                     <h3 class="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">Compromisso do Usuário</h3>
                     <p>
-                        O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Mande Bem - Ferramentas Úteis para o Dia a Dia oferece no site, com caráter enunciativo, mas não limitativo:
+                        Ao utilizar o Mande Bem - Ferramentas Úteis para o Dia a Dia, o usuário se compromete a utilizar as informações e conteúdos de forma íntegra e responsável, observando as seguintes diretrizes:
                     </p>
-                    
+
                     <ul class="space-y-4 bg-zinc-50 dark:bg-zinc-900/50 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800">
                         <li class="flex gap-3 font-medium">
                             <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
-                            <span>Não se envolver em atividades que sejam ilegais ou contrárias à boa fé e à ordem pública;</span>
+                            <span>Abster-se de atividades ilícitas, contrárias à boa-fé, à ética digital ou que atentem contra a ordem pública;</span>
                         </li>
                         <li class="flex gap-3 font-medium">
                             <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
-                            <span>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, pornografia ilegal ou apologia ao terrorismo;</span>
+                            <span>Não disseminar conteúdos de ódio, caráter racista, xenofóbico, apologia ao terrorismo ou qualquer material que viole os direitos humanos e a legislação vigente;</span>
                         </li>
                         <li class="flex gap-3 font-medium">
                             <span class="text-orange-600"><i data-lucide="shield-check" class="w-6 h-6"></i></span>
-                            <span>Não causar danos aos sistemas físicos e lógicos do Mande Bem, introduzindo vírus ou outros códigos maliciosos.</span>
+                            <span>Zelar pela integridade tecnológica do Mande Bem, não introduzindo vírus, malwares ou quaisquer códigos que possam danificar nossos sistemas físicos ou lógicos.</span>
                         </li>
                     </ul>
 
-                    <h3 class="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight pt-6">Mais informações</h3>
+                    <h3 class="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight pt-6">Esclarecimentos Adicionais</h3>
                     <p>
-                        Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados para garantir a funcionalidade dos recursos que você usa.
+                        Esta política visa garantir a sua segurança e clareza. Caso tenha dúvidas sobre a necessidade de manter cookies ativados, recomendamos que os mantenha habilitados, garantindo assim a plena funcionalidade de todas as ferramentas interativas que o Mande Bem oferece para facilitar o seu cotidiano.
                     </p>
 
                     <div class="mt-12 pt-6 border-t border-zinc-100 dark:border-zinc-900 text-sm text-zinc-500 italic flex items-center gap-2">
@@ -167,80 +162,13 @@
         </div>
 
         <!-- Footer -->
-        <footer class="w-full max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-zinc-200 dark:border-zinc-900 grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-4 bg-white dark:bg-zinc-800 rounded-t-lg shadow-[0_-5px_20px_rgba(0,0,0,0.02)]">
-            <div class="space-y-2 text-center items-center md:items-start md:text-left">
-                <img src="https://mandebem.com/img/mandebem.com.png" alt="Logo Mande Bem" class="h-20 w-auto mb-6 mx-auto md:mx-0">
-                <h3 class="text-lg font-black tracking-tight text-orange-600 uppercase">
-                    Mande Bem em qualquer ocasião.
-                </h3>
-                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-sm">
-                    Sua central de ferramentas inteligentes para economizar tempo, dinheiro e recursos.
-                </p>
-            </div>
-
-            <div class="space-y-2 text-center items-center md:text-right md:flex md:flex-col md:items-end">
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 md:mt-16">
-                        Links Úteis
-                    </h3>
-                    <div class="flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
-                        <a href="index.html" class="hover:text-orange-600 transition-colors">Início</a>
-                        <a href="index.html#apps" class="hover:text-orange-600 transition-colors">Ferramentas</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest uppercase text-orange-600 mb-4 mt-2">
-                        Contato
-                    </h3>
-                    <div class="space-y-3 flex flex-col md:items-end gap-3 text-sm font-semibold tracking-wide text-zinc-500">
-                        <a href="mailto:contato@mandebem.com" class="hover:text-orange-600 transition-colors">
-                            <span class="group-hover:underline text-center items-center">contato@mandebem.com</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="md:col-span-2 border-t border-zinc-200 dark:border-zinc-900 text-center mt-8">
-                <div class="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-zinc-400 dark:text-zinc-500 font-medium tracking-wide">
-                    © 2026 MandeBem.com - Todos os direitos reservados.
-                </div>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
     </div>
 
+    <script src="layout.js"></script>
     <script>
-        // Configurar ícones Lucide
-        lucide.createIcons();
-
-        // Lógica de Tema
-        const themeToggle = document.getElementById('theme-toggle');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
-        const html = document.documentElement;
-
-        function updateThemeIcons(theme) {
-            if (theme === 'dark') {
-                lightIcon.classList.remove('hidden');
-                darkIcon.classList.add('hidden');
-            } else {
-                lightIcon.classList.add('hidden');
-                darkIcon.classList.remove('hidden');
-            }
-        }
-
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.classList.toggle('dark', savedTheme === 'dark');
-        updateThemeIcons(savedTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = html.classList.toggle('dark');
-            const newTheme = isDark ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcons(newTheme);
-        });
+        // Renderizar Layout
+        renderLayout('');
     </script>
 </body>
 
